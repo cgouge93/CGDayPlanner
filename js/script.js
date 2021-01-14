@@ -60,4 +60,16 @@ $(document).ready(function() {
         // appending table rows to myPlanner div
 		$("#myPlanner").append(tr);
 		
+    }
+    
+    // setting up planner to append times between 8a & 5p from moment()
+    function initializePlanner() {
+		var tempPlanner = {};
+
+		for (var i = 8; i < 18; i++) {
+			
+			tempPlanner[moment(i, "H").format("h a")] = "";
+		}
+		
+		return tempPlanner;
 	}
