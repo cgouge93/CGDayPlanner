@@ -72,7 +72,9 @@ td.textArea {
   color: white;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+.saveBtn :hover {
+  font-size: 25px;
+  margin-top:3px
+  
+  
 }

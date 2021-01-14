@@ -73,4 +73,23 @@ $(document).ready(function() {
 		
 		return tempPlanner;
     }
+    
+    // event listener for save button
+    $(".saveBtn").on("click", function() {
+        // changes color of save icon after clicked
+		$(this).css("color", "#f5d362");
+		var time = $(this)
+			.parent()
+			.find(".description")
+			.attr("data-time");
+		var text = $(this)
+			.parent()
+			.find(".description")
+			.val();
+		console.log(time, text);
+
+		planner[time] = text;
+
+		localStorage.setItem("planner", JSON.stringify(planner));
+	});
 });
