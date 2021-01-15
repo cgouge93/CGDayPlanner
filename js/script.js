@@ -81,12 +81,13 @@ $(document).ready(function() {
 		var time = $(this)
 			.parent()
 			.find(".description")
-			.attr("data-time");
+            .attr("data-time");
+            console.log(this)
 		var text = $(this)
 			.parent()
 			.find(".description")
 			.val();
-		console.log(time, text);
+		
 
 		planner[time] = text;
 
